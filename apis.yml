@@ -1,7 +1,17 @@
 aid: appaegis
 name: Appaegis
-description: Appaegis is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Appaegis (now Mammoth Cyber) is an enterprise zero-trust access and secure
+  enterprise browser company. Originally launched as Appaegis, the company
+  rebranded to Mammoth Cyber and delivers an Enterprise AI Browser that unifies
+  secure web access, data loss prevention, granular access policy, and zero-trust
+  controls for remote workforces, BYOD, and third-party contractors. The platform
+  is API-first: it exposes a REST management API (v1 and v2) and a GraphQL
+  endpoint on api.mammothcyber.net for administering users, teams, access roles,
+  policies, applications, networks, registered devices, blocked-site lists, and
+  URL categories, with API keys issued from the management portal and a
+  token-exchange authentication flow. This profile was seeded as a 500 Global
+  portfolio lead and enriched from the company's public developer surface.
 url: https://raw.githubusercontent.com/api-evangelist/appaegis/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +19,53 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+image: https://avatars.githubusercontent.com/u/53629332?v=4
 tags:
 - Company
-apis: []
+- Security
+- Zero Trust
+- Enterprise Browser
+- Access Management
+- Data Loss Prevention
+- GenAI Security
+- Identity
+- SASE
+apis:
+- name: Mammoth Cyber Management API
+  description: >-
+    REST (v1 + v2) and GraphQL management API for the Mammoth Cyber (Appaegis)
+    zero-trust access platform. Administers users, teams, access roles, policies,
+    applications, networks, registered devices, blocked-site lists, and URL
+    categories. Authentication is a token exchange: POST apiKey/apiSecret to
+    /api/v2/authentication to receive an idToken, then pass it as the idToken
+    header (REST) or Authorization: Bearer (GraphQL). API keys are created in the
+    management portal under Setting -> Admins & API Keys.
+  humanURL: https://github.com/appaegis/api-script-samples
+  baseURL: https://api.mammothcyber.net
+  properties:
+  - type: SourceCode
+    url: https://github.com/appaegis/api-script-samples
+  - type: Authentication
+    url: authentication/appaegis-authentication.yml
+  - type: Conventions
+    url: conventions/appaegis-conventions.yml
+  - type: MCPServer
+    url: mcp/appaegis-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +74,46 @@ maintainers:
 common:
 - type: Website
   url: https://mammothcyber.com
+- type: DeveloperPortal
+  url: https://github.com/appaegis/api-script-samples
+- type: Documentation
+  url: https://github.com/appaegis/api-script-samples/blob/main/README.md
+- type: GettingStarted
+  url: https://github.com/appaegis/api-script-samples#quickstart
+- type: SourceCode
+  url: https://github.com/appaegis/api-script-samples
+- type: GitHubOrganization
+  url: https://github.com/appaegis
+- type: Blog
+  url: https://mammothcyber.com/blog/
+- type: Support
+  url: https://mammothcyber.com/contact/
+- type: SignUp
+  url: https://mammothcyber.com/schedule-a-demo/
+- type: TermsOfService
+  url: https://mammothcyber.com/terms/
+- type: PrivacyPolicy
+  url: https://mammothcyber.com/policy/
+- type: Downloads
+  url: https://mammothcyber.com/downloads/
+- type: Authentication
+  url: authentication/appaegis-authentication.yml
+- type: Conventions
+  url: conventions/appaegis-conventions.yml
+- type: MCPServer
+  url: mcp/appaegis-mcp.yml
+- type: LLMsTxt
+  url: llms/appaegis-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Packages
+  url: packages/appaegis-packages.yml
+- type: WellKnown
+  url: well-known/appaegis-well-known.yml
+- type: DomainSecurity
+  url: security/appaegis-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

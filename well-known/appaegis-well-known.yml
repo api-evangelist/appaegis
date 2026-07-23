@@ -1,0 +1,30 @@
+generated: '2026-07-17'
+method: searched
+source: live probes of the marketing and API hosts
+note: >-
+  No .well-known discovery documents are published. The marketing host returns
+  404 for all probed paths; the API host (api.mammothcyber.net) returns 403 to
+  unauthenticated requests including .well-known paths. Recorded for auditability.
+hosts:
+  - host: https://mammothcyber.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://api.mammothcyber.net
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403

@@ -1,0 +1,16 @@
+generated: '2026-07-17'
+method: generated
+source: https://github.com/appaegis/api-script-samples
+note: >-
+  Agent Skills grounded in the provider's public api-script-samples repository.
+  Every step maps to a real, documented operation on api.mammothcyber.net. No
+  provider-published AGENTS.md/skill files were found.
+skills:
+  - file: appaegis-manage-block-list.md
+    name: Manage the Mammoth Cyber block list
+    api: https://api.mammothcyber.net
+    operations: [authenticate, update_blocked_sites]
+  - file: appaegis-update-device-tags.md
+    name: Update Mammoth Cyber registered-device tags
+    api: https://api.mammothcyber.net
+    operations: [authenticate, update_registered_device_tag]

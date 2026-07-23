@@ -1,0 +1,31 @@
+generated: '2026-07-17'
+method: searched
+source: https://github.com/appaegis
+note: >-
+  No first-party client SDK is published to npm, PyPI, Maven Central, NuGet,
+  pkg.go.dev, RubyGems, Packagist, or crates.io (all probed, none found). Mammoth
+  Cyber (Appaegis) ships a first-party example/reference repository of Python API
+  scripts rather than an installable SDK; it is catalogued here as official source
+  code, not wired as an SDKs pointer.
+packages:
+  - language: python
+    registry: github
+    name: appaegis/api-script-samples
+    url: https://github.com/appaegis/api-script-samples
+    install: git clone https://github.com/appaegis/api-script-samples
+    official: true
+    kind: sample-scripts
+    description: >-
+      First-party example scripts exercising the v2 management API (block lists,
+      URL categories, device-tag updates) plus a shared auth/token-exchange
+      library (lib/common.py). Depends on generic libraries (requests, gql,
+      aiohttp), not a branded SDK.
+registries_probed:
+  npm: not-found
+  pypi: not-found
+  maven: not-found
+  nuget: not-found
+  go: not-found
+  rubygems: not-found
+  packagist: not-found
+  crates: not-found

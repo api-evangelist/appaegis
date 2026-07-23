@@ -1,0 +1,30 @@
+# Appaegis (Mammoth Cyber)
+
+> Appaegis, now Mammoth Cyber, is an enterprise zero-trust access and secure Enterprise AI Browser company. Its API-first platform exposes a REST (v1 + v2) and GraphQL management API on api.mammothcyber.net for administering users, teams, access roles, policies, applications, networks, registered devices, blocked-site lists, and URL categories. Authentication is a token exchange: POST an apiKey/apiSecret pair to /api/v2/authentication for an idToken, then present it (idToken header for REST, Authorization: Bearer for GraphQL).
+
+## APIs
+
+- [Mammoth Cyber Management API (samples + README)](https://github.com/appaegis/api-script-samples): First-party Python examples and the documented v1/v2 REST + GraphQL surface. Base URL https://api.mammothcyber.net.
+
+## Docs
+
+- [Quickstart](https://github.com/appaegis/api-script-samples#quickstart): install.sh bootstrap, venv setup, running the sample scripts.
+- [Authentication](authentication/appaegis-authentication.yml): token-exchange flow, API key provisioning, idToken/Bearer usage.
+- [Conventions](conventions/appaegis-conventions.yml): REST v1/v2 + GraphQL surfaces, versioning, error envelope.
+- [MCP (candidate)](mcp/appaegis-mcp.yml): candidate MCP tool list derived from documented operations.
+
+## Integrations
+
+- [HashiCorp Vault integration](https://github.com/appaegis/hashicorp-vault-integration)
+- [PagerDuty integration](https://github.com/appaegis/pagerduty-integration)
+
+## Company
+
+- [Website](https://mammothcyber.com)
+- [Blog](https://mammothcyber.com/blog/)
+- [Software Downloads](https://mammothcyber.com/downloads/)
+- [GitHub Organization](https://github.com/appaegis)
+- [Contact / Support](https://mammothcyber.com/contact/)
+- [Schedule a Demo](https://mammothcyber.com/schedule-a-demo/)
+- [Terms](https://mammothcyber.com/terms/)
+- [Privacy Notice](https://mammothcyber.com/policy/)

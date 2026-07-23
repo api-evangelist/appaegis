@@ -1,0 +1,58 @@
+generated: '2026-07-17'
+method: searched
+source: https://github.com/appaegis/api-script-samples
+docs: https://github.com/appaegis/api-script-samples/blob/main/README.md
+summary: >-
+  Cross-cutting request/response conventions for the Mammoth Cyber (Appaegis)
+  management API, captured from the provider's public api-script-samples
+  repository. The API is API-first with two REST versions (v1 legacy, v2 current)
+  under /api/ plus a GraphQL endpoint, all on api.mammothcyber.net.
+base_url: https://api.mammothcyber.net
+surfaces:
+  - style: REST
+    version: v2
+    path_prefix: /api/v2
+    status: current
+  - style: REST
+    version: v1
+    path_prefix: /api/v1
+    status: legacy
+  - style: GraphQL
+    paths: [/graphql, /api/graphql]
+    transport: HTTP POST (aiohttp/gql client in samples)
+authentication:
+  style: token-exchange
+  detail: See authentication/appaegis-authentication.yml
+  rest_header: idToken
+  graphql_header: 'Authorization: Bearer <idToken>'
+content_type:
+  request: application/json
+  response: application/json
+versioning:
+  scheme: uri-path
+  values: [v1, v2]
+  note: v2 is current; README states "our API is upgraded to v2". v1 endpoints remain for users, teams, accessRoles, policies, applications, networks.
+idempotency:
+  supported: false
+  note: No idempotency-key mechanism is documented in the sample scripts or README.
+pagination:
+  documented: false
+  note: Not documented in the public sample surface.
+error_handling:
+  envelope: JSON body with an "error" field on failure
+  detection: >-
+    Sample library treats HTTP status >= 400 OR presence of an "error" key in the
+    JSON body as a failure (lib/common.py getResource raises on either).
+  status_codes_observed: [400, 403]
+  note: >-
+    /api/v2/authentication returns 400 on a malformed/empty credential body; the
+    API host returns 403 to unauthenticated root/well-known requests.
+request_response_notes:
+  - Resource ids are URL-encoded before being appended to collection paths (urllib.parse.quote).
+  - PUT is used for updates (e.g. /api/v2/registered-device/{id}, /api/v2/blocked-sites).
+credentials:
+  provisioning: Management portal -> Setting -> Admins & API Keys -> API Keys
+  format: dotenv file (apiKey / apiSecret), secret shown once
+cross_references:
+  authentication: authentication/appaegis-authentication.yml
+  mcp: mcp/appaegis-mcp.yml
