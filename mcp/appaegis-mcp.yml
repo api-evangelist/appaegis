@@ -2,11 +2,9 @@ generated: '2026-07-17'
 method: derived
 status: candidate
 source: https://github.com/appaegis/api-script-samples
-note: >-
-  No official hosted/remote MCP server was found for Mammoth Cyber (Appaegis).
-  This is a CANDIDATE tool list derived from the operations documented in the
-  provider's public api-script-samples repository (lib/common.py endpoint
-  constants + the sample scripts). Every tool maps to a real, documented HTTP
+note: No official hosted/remote MCP server was found for Mammoth Cyber (Appaegis). This is a CANDIDATE
+  tool list derived from the operations documented in the provider's public api-script-samples repository
+  (lib/common.py endpoint constants + the sample scripts). Every tool maps to a real, documented HTTP
   operation. Not published by the provider.
 server:
   name: appaegis
@@ -14,54 +12,60 @@ server:
   base_url: https://api.mammothcyber.net
   auth: token-exchange (see authentication/appaegis-authentication.yml)
 tools:
-  - name: authenticate
-    description: Exchange apiKey/apiSecret for a short-lived idToken.
-    method: POST
-    path: /api/v2/authentication
-  - name: update_blocked_sites
-    description: Upload/replace the organization blocked-site (block list) entries.
-    method: PUT
-    path: /api/v2/blocked-sites
-    source_script: block-list-v2.py
-  - name: update_url_categories
-    description: Manage custom URL category assignments.
-    method: PUT
-    path: /api/v2/blocked-sites
-    source_script: url-category-v2.py
-  - name: update_registered_device_tag
-    description: Update the tag on a registered device by id.
-    method: PUT
-    path: /api/v2/registered-device/{id}
-    source_script: device-tag-update.py
-  - name: list_users
-    description: List users.
-    method: GET
-    path: /api/v1/users
-  - name: list_teams
-    description: List teams.
-    method: GET
-    path: /api/v1/teams
-  - name: list_access_roles
-    description: List access roles.
-    method: GET
-    path: /api/v1/accessRoles
-  - name: list_policies
-    description: List access policies.
-    method: GET
-    path: /api/v1/policies
-  - name: list_applications
-    description: List applications.
-    method: GET
-    path: /api/v1/applications
-  - name: list_networks
-    description: List networks.
-    method: GET
-    path: /api/v1/networks
-  - name: lookup_ids
-    description: Resolve names to internal object ids.
-    method: GET
-    path: /api/v1/util/lookupIds
-  - name: graphql_query
-    description: Run a GraphQL query/mutation against the management graph.
-    method: POST
-    path: /graphql
+- name: authenticate
+  description: Exchange apiKey/apiSecret for a short-lived idToken.
+  method: POST
+  path: /api/v2/authentication
+- name: update_blocked_sites
+  description: Upload/replace the organization blocked-site (block list) entries.
+  method: PUT
+  path: /api/v2/blocked-sites
+  source_script: block-list-v2.py
+- name: update_url_categories
+  description: Manage custom URL category assignments.
+  method: PUT
+  path: /api/v2/blocked-sites
+  source_script: url-category-v2.py
+- name: update_registered_device_tag
+  description: Update the tag on a registered device by id.
+  method: PUT
+  path: /api/v2/registered-device/{id}
+  source_script: device-tag-update.py
+- name: list_users
+  description: List users.
+  method: GET
+  path: /api/v1/users
+- name: list_teams
+  description: List teams.
+  method: GET
+  path: /api/v1/teams
+- name: list_access_roles
+  description: List access roles.
+  method: GET
+  path: /api/v1/accessRoles
+- name: list_policies
+  description: List access policies.
+  method: GET
+  path: /api/v1/policies
+- name: list_applications
+  description: List applications.
+  method: GET
+  path: /api/v1/applications
+- name: list_networks
+  description: List networks.
+  method: GET
+  path: /api/v1/networks
+- name: lookup_ids
+  description: Resolve names to internal object ids.
+  method: GET
+  path: /api/v1/util/lookupIds
+- name: graphql_query
+  description: Run a GraphQL query/mutation against the management graph.
+  method: POST
+  path: /graphql
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census
