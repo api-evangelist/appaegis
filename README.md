@@ -64,6 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Appaegis is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Appaegis (now Mammoth Cyber) is an enterprise zero-trust access and secure enterprise browser company. Originally launched as Appaegis, the company rebranded to Mammoth Cyber and delivers an Enterprise AI Browser that unifies secure web access, data loss prevention, granular access policy, and zero-trust controls for remote workforces, BYOD, and third-party contractors. The platform is API-first: it exposes a REST management API (v1 and v2) and a GraphQL endpoint on api.mammothcyber.net for administering users, teams, access roles, policies, applications, networks, registered devices, blocked-site lists, and URL categories, with API keys issued from the management portal and a token-exchange authentication flow. This profile was seeded as a 500 Global portfolio lead and enriched from the company's public developer surface.
 
-Backed by: 500-global — https://mammothcyber.com
+**Areas:** Company · Security · Zero Trust · Enterprise Browser · Identity and Access Management · Data Loss Prevention · GenAI Security · Identity · SASE
+
+## Appaegis on APIs.io
+
+Everything profiled for Appaegis is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/appaegis/](https://apis.io/providers/appaegis/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Mammoth Cyber Management API](https://apis.io/apis/appaegis/mammoth-cyber-management-api/) — REST (v1 + v2) and GraphQL management API for the Mammoth Cyber (Appaegis) zero-trust access platform. Administers users, teams, access roles, policies,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [appaegis](https://apis.io/servers/appaegis/appaegis/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Appaegis Authentication](https://apis.io/security/appaegis/appaegis-authentication/)
+- [Appaegis Domain Security](https://apis.io/security/appaegis/appaegis-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mammothcyber.com)
+- [Documentation](https://github.com/appaegis/api-script-samples/blob/main/README.md)
+- [Getting started](https://github.com/appaegis/api-script-samples#quickstart)
+- [Sign up](https://mammothcyber.com/schedule-a-demo/)
+- [Support](https://mammothcyber.com/contact/)
+- [Blog](https://mammothcyber.com/blog/)
+- [Terms of service](https://mammothcyber.com/terms/)
+- [Privacy policy](https://mammothcyber.com/policy/)
+- [GitHub](https://github.com/appaegis)
+
+## API Evangelist rating
+
+**Kin Score 25.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 51.8 |
+| Access clarity | 34.2 |
+
+**Agent readiness 3.4** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/appaegis/](https://apis.io/providers/appaegis/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Appaegis: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/appaegis/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
